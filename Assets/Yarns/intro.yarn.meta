@@ -1,0 +1,58 @@
+fileFormatVersion: 2
+guid: 69b5765437b1f3a41a05f8f0e0c0e0c9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - intro-intro-0
+  - intro-intro-1
+  - intro-intro-2
+  - intro-intro-3
+  - intro-intro-4
+  - intro-intro-5
+  - intro-intro-6
+  - intro-intro-7
+  - intro-intro-8
+  - intro-intro-9
+  - intro-intro-10
+  - intro-intro-11
+  - intro-intro-12
+  - intro-intro-13
+  - intro-intro-14
+  - intro-intro-15
+  - intro-intro-16
+  - intro-intro-17
+  - intro-intro-18
+  - intro-intro-19
+  - intro-intro-20
+  - intro-intro-21
+  - intro-intro-22
+  - intro-intro-23
+  - intro-intro-24
+  - intro-intro-25
+  - intro-intro-26
+  - intro-exposition-27
+  - intro-exposition-28
+  - intro-exposition-29
+  - intro-exposition-30
+  - intro-exposition-31
+  - intro-exposition-32
+  - intro-exposition-33
+  - intro-exposition-34
+  - intro-exposition-35
+  - intro-exposition-36
+  - intro-exposition-37
+  - intro-exposition-38
+  - intro-exposition-39
+  - intro-exposition-40
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

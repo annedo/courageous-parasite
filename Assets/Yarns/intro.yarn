@@ -1,0 +1,61 @@
+title: intro
+---
+<<set $citizen_goal to 50>>
+<<set $pirate_goal to 50>>
+As the spaceship took off, my last sight of Earth was of mushroom clouds blooming across the horizon.
+
+INTERCOM: ❄︎✌︎😐︎☜︎⚐︎☞︎☞︎ ✋︎💣︎💣︎✋︎☠︎☜︎☠︎❄︎
+
+My name is Tahm. I used to be a surgeon.
+Then the 23rd Global Nuclear War happened.
+
+INTERCOM: ☜︎☠︎❄︎☜︎☼︎✋︎☠︎☝︎ 💧︎🏱︎✌︎👍︎☜︎
+
+As we soar into the vast expanse of the stars, the roar of the engines simmers to a low hum.
+They are now so quiet I can hear the sobbing of the families around me.
+
+INTERCOM: 💧︎❄︎✌︎👌︎✋︎☹︎✋︎☪︎✋︎☠︎☝︎ ☞︎☹︎✋︎☝︎☟︎❄︎
+
+Now I'm headed for a new planet, to start a new life from scratch.
+We fly in silence for a while, as the ship stabilizes and the finality of our decisions sinks in.
+
+At some point, the social workers assigned to our cases roll in from another cabin. Their metal bodies clanging against the metal floors.
+
+🕆︎❒︎⬧︎♋︎: Hello, Tahm.
+🕆︎❒︎⬧︎♋︎: Self is 🕆︎❒︎⬧︎♋︎. But please christen self "Paul". 
+PAUL: Sorry for Earth.
+TAHM: Yeah.
+
+INTERCOM: ❄︎✋︎💣︎☜︎ ❄︎⚐︎ ✌︎☼︎☼︎✋︎✞︎✌︎☹︎🖳︎ 🗐︎ 💧︎☟︎✌︎👎︎☜︎💧︎
+
+PAUL: Says we arrive self planet in 4 purples. To you, is 64 Earth hours.
+TAHM: That's quite a long time. 
+PAUL: You have much to learn.
+PAUL: New planet. New language. New culture. New time cycles.
+PAUL: Do you fear?
+-> TAHM: Yes.... it all seems so daunting.
+    PAUL: Expected. Will be ok. Will do self best to help.
+-> TAHM: No.... all I can do is my best to survive.
+    PAUL: Brave human. Good quality. Must try hard.
+-> TAHM: I don't know.... too much has happened to think clearly.
+    PAUL: Expected. Human lose home planet. Will do self best to help.
+[[exposition]]
+===
+
+title: exposition
+---
+PAUL: First, about self planet. Is ancient construct. Unknown maker.
+PAUL: Sometimes, gears fail. Must replace with self bodies. Hard work.
+PAUL: Not possible for human. Too soft. Too fragile. Must find other work.
+PAUL: Apologies. Self English ok?
+-> TAHM: You're doing great. Better than I can speak 🕈︎□︎❒︎♎︎⬧︎ at least!
+    PAUL: 🙰♋︎☺︎♋︎🙰♋︎, thank you Tahm. 
+-> TAHM: Sorry, I'm going to need more time with a dictionary.
+    We spent those 64 hours going through as much as we could about their planet, their language, and the steps to citizenship.
+    Humans are the first organics they have allowed to their planet, after learning about the War on Earth.
+    The star cluster that acts as their sun never sets. Instead, it changes color, regularly shifting from red to purple. "4 purples" is the time it takes to see purple 4 times.
+    Their planet is an enormous machine made of endlessly spinning gears. When the originals break, a citizen is paid to replace it until they can produce another copy. 95% of the jobs on their planet consist of acting as cogs in the machine.
+    Humans, of course, are incapable of performing these jobs. Most of the ones there are factory workers or recycling scavengers.
+    Each refugee is given 8 reds and 7 purples of free housing in the refugee sector. In that time we are to find a source of income to pay the citizenship fee, which is ₴{$citizen_goal}.
+    If you can't pay the fee, you must return to Earth or be moved to a different planet.
+===
