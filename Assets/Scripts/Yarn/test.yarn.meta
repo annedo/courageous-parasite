@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: bd4a7c333520c8749af3c029736cfc29
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs: []
+  compilationStatus: 0
+  isSuccesfullyCompiled: 0
+  compilationErrorMessage: "Error on line 21 at position 7:\nextraneous input '==='
+    expecting {INDENT, DEDENT, HASHTAG, '->', COMMAND_START, '[[', FORMAT_FUNCTION_START,
+    BODY_HASHTAG, TEXT_NEWLINE, TEXT_HASHTAG, TEXT_EXPRESSION_START, TEXT_COMMAND_START,
+    TEXT_FORMAT_FUNCTION_START, TEXT, TEXT_COMMANDHASHTAG_COMMAND_START, TEXT_COMMANDHASHTAG_HASHTAG,
+    TEXT_COMMANDHASHTAG_NEWLINE, HASHTAG_TAG}\r\n\t\t\t\t\t\t===\r\r\n      ^^^"
+  baseLanguage: {instanceID: 0}
+  localizations: []
