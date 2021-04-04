@@ -38,5 +38,5 @@ public class Speaker : MonoBehaviour
             _spriteDisplayer.SetSprite(Sprites[0]);
 
         FrameCount++;
-    }    
+    }
 }
