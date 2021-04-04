@@ -7,6 +7,8 @@ namespace Assets.Scripts
     {
         public static CharacterName CurrentNpc;
 
+        public static int CurrentMoney = 0;
+
         // Add more characters here
         public static IReadOnlyDictionary<CharacterName, Speaker> PlayerSpeaker 
             = new Dictionary<CharacterName, Speaker>()
@@ -31,6 +33,17 @@ namespace Assets.Scripts
         /// The amount of frames between each sprite change for a speaker
         /// </summary>
         public const int SPEAKER_FRAMERATE = 50;
+
+        /// <summary>
+        /// Cog game
+        /// The amount of clicks of the center gear to get 1 dollar.
+        /// </summary>
+        public const int GEAR_GAME_CLICKS_FOR_ONE_DOLLAR = 15;
+
+        /// <summary>
+        /// Time in seconds for a round of the cog game.
+        /// </summary>
+        public const int GEAR_GAME_TIME_LIMIT = 60;
     }
 
     public enum CharacterName

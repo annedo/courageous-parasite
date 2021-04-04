@@ -52,7 +52,16 @@ public class RunYarn : MonoBehaviour
             NonPlayerCharacter.SetSprite();
         }
 
-        PlayerText.text = _currentLine;
+        if (isPlayerTalking)
+        {
+            PlayerText.text = _currentLine;
+            NonPlayerText.text = string.Empty;
+        }            
+        else
+        {
+            NonPlayerText.text = _currentLine;
+            PlayerText.text = string.Empty;
+        }            
 
         FrameCount++;
     }
