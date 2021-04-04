@@ -3,12 +3,22 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
+    public enum CharacterName
+    {
+        DukeTheCeo, // PC
+        Cog1, // NPCs 
+        what3,
+        what4
+    }
+
     public static class GameModel
     {
         public static CharacterName CurrentNpc;
 
-        public static int CurrentMoney = 0;
+        public static double CurrentMoney = 0;
+        public static string CurrencySymbol = "₴";
 
+#pragma warning disable UNT0010 // MonoBehaviour instance creation
         // Add more characters here
         public static IReadOnlyDictionary<CharacterName, Speaker> PlayerSpeaker 
             = new Dictionary<CharacterName, Speaker>()
@@ -28,6 +38,7 @@ namespace Assets.Scripts
                     }
                 }
         };
+#pragma warning restore UNT0010 // MonoBehaviour instance creation
 
         /// <summary>
         /// The amount of frames between each sprite change for a speaker
@@ -36,21 +47,32 @@ namespace Assets.Scripts
 
         /// <summary>
         /// Cog game
-        /// The amount of clicks of the center gear to get 1 dollar.
+        /// The amount of money received from 1 click of the center gear.
         /// </summary>
-        public const int GEAR_GAME_CLICKS_FOR_ONE_DOLLAR = 15;
+        public const double GEAR_GAME_MONEY_PER_CLICK = 0.06;
 
         /// <summary>
+        /// Cog game
         /// Time in seconds for a round of the cog game.
         /// </summary>
         public const int GEAR_GAME_TIME_LIMIT = 30;
-    }
 
-    public enum CharacterName
-    {
-        DukeTheCeo, // PC
-        Cog1, // NPCs 
-        what3,
-        what4
-    }
+        /// <summary>
+        /// Trash game
+        /// Time in seconds for a round of the trash game.
+        /// </summary>
+        public const int TRASH_GAME_TIME_LIMIT = 30;
+
+        /// <summary>
+        /// Trash game
+        /// Amount of trash objects to spawn.
+        /// </summary>
+        public const int TRASH_GAME_TRASH_COUNT = 100;
+
+        /// <summary>
+        /// Trash game
+        /// Amount of money objects to spawn.
+        /// </summary>
+        public const int TRASH_GAME_VALUABLES_COUNT = 15;
+    }    
 }

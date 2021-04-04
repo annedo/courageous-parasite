@@ -1,4 +1,4 @@
-using Assets.Scripts;
+﻿using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +14,6 @@ public class MainScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoneyText.text = $"${GameModel.CurrentMoney}";
+        MoneyText.text = string.Format("{0}{1:N2}", GameModel.CurrencySymbol, GameModel.CurrentMoney);
     }
 }

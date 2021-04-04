@@ -1,4 +1,4 @@
-using Assets.Scripts;
+﻿using Assets.Scripts;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,7 +27,7 @@ public class PlayerGear : MonoBehaviour
         Timer += Time.deltaTime;
         CurrentTime = GameModel.GEAR_GAME_TIME_LIMIT - (int)Math.Round(Timer % 60, 0);
 
-        MoneyText.text = $"${CurrentMoney}";
+        MoneyText.text = string.Format("{0}{1:N2}", GameModel.CurrencySymbol, CurrentMoney);
         TimerText.text = CurrentTime.ToString();
 
         if (CurrentTime <= 0)
@@ -37,21 +37,15 @@ public class PlayerGear : MonoBehaviour
         }
     }
 
-    private int CurrentMoney = 0;
-    private int GearClickCount = 0;
+    private double CurrentMoney = 0;
     private void OnMouseDown()
     {
-        GearClickCount++;
         gameObject.transform.rotation *= Quaternion.Euler(0, 0, zRotate);
 
         notControlledGears.ForEach(x => x.Rotate(-zRotate));
 
         gearClick.Play();
 
-        if (GearClickCount == GameModel.GEAR_GAME_CLICKS_FOR_ONE_DOLLAR)
-        {
-            CurrentMoney++;
-            GearClickCount = 0;
-        }
+        CurrentMoney += GameModel.GEAR_GAME_MONEY_PER_CLICK;
     }
 }
