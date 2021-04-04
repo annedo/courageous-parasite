@@ -43,7 +43,7 @@ namespace Assets.Scripts
         /// <summary>
         /// Time in seconds for a round of the cog game.
         /// </summary>
-        public const int GEAR_GAME_TIME_LIMIT = 60;
+        public const int GEAR_GAME_TIME_LIMIT = 30;
     }
 
     public enum CharacterName
