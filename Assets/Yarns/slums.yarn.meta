@@ -8,13 +8,13 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
+  baseLanguageID: en-US
   stringIDs: []
   compilationStatus: 0
   isSuccesfullyCompiled: 0
-  compilationErrorMessage: "Error on line 42 at position 6:\nmismatched input '<EOF>'
-    expecting {HASHTAG, BODY_HASHTAG, TEXT_NEWLINE, TEXT_HASHTAG, TEXT_COMMAND_START,
-    TEXT_COMMANDHASHTAG_COMMAND_START, TEXT_COMMANDHASHTAG_HASHTAG, TEXT_COMMANDHASHTAG_NEWLINE,
-    HASHTAG_TAG}\r\nWhen \r\n     "
+  compilationErrorMessage: "Error on line 64 at position 83:\nmismatched input 'set
+    ' expecting COMMAND_IF\r\n        CETTALON: \"\U0001F3F1\uFE0E\u264B\uFE0E\u2752\uFE0E\u264B\uFE0E\u2B27\uFE0E\u2653\uFE0E\u29EB\uFE0E\u264F\uFE0E\"
+    is what they call us. It means \"parasite\". <<set $translate_parasite to true>>\r\r\n                                                                                 
+    ^^^^"
   baseLanguage: {instanceID: 0}
   localizations: []

@@ -1,4 +1,4 @@
-title: intro
+﻿title: intro
 ---
 <<set $citizen_goal to 50>>
 <<set $pirate_goal to 50>>
@@ -58,4 +58,5 @@ PAUL: Apologies. Self English ok?
     Humans, of course, are incapable of performing these jobs. Most of the ones there are factory workers or recycling scavengers.
     Each refugee is given 8 reds and 7 purples of free housing in the refugee sector. In that time we are to find a source of income to pay the citizenship fee, which is ₴{$citizen_goal}.
     If you can't pay the fee, you must return to Earth or be moved to a different planet.
+[[slums_arrival]]
 ===

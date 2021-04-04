@@ -35,8 +35,41 @@ Though my mind can still see phantom swirls in the texture of the canvas fabric,
 Most importantly - it's dark. 
 The reality of having constant sunlight is sinking in, and I have never been more thankful for the darkness as I slip away into sleep.
 <<fade out>>
+[[slums_red1]]
 ===
 
 title: slums_red1
 ---
-When 
+I am awoken by the sound of a woman humming outside of my tent.
+Venturing into the bright red sunlight, I see a tired young mother tending to her baby and sorting what looks like a large pile of sand.
+
+CETTALON: Oh, hello neighbor. I'm Cettalon.
+TAHM: Hi, I'm Tahm. I just arrived here today.
+CETTALON: Nice to meet you. Junior and I have been here for about a month in Earth hours. It's kind of hard to tell since it's always daylight here.
+-> TAHM: What are you doing with this sand here?
+    CETTALON: I'm sorting out the different materials for recycling. It's one of the few jobs available for humans here.
+    CETTALON: It's tedious, but it's safer than working in a factory or scavenging trash heaps.
+    CETTALON: Plus, I get to work from home.
+-> TAHM: What did you use to do on Earth?
+    CETTALON: I was a geologist. Which is why I find the sand here fascinating. The principles of tectonic movements don't apply at all on this planet. What about you?
+    TAHM: I was a surgeon. My hospital was destroyed in an airstrike.
+    CETTALON: Hmmm. It seems like they're still only accepting highly educated people from Earth. Yet there are no jobs suitable for our qualifications here... So what's the point? Why not just let anyone from Earth come?
+    -> TAHM: Maybe they see humans rebuilding our society on their planet.
+        CETTALON: Look around. Don't you think the Refugee Sector could use a few people who worked in Waste Management? What's the point of having a bunch of university professors when we don't even have a working plumbing system?
+        TAHM: I'm sure they will start expanding the program once there are more opportunities for humans here.
+        CETTALON: I hope so. My partner was a landscaper. They're still stuck on Earth.
+        CETTALON: Well, it was nice chatting with you. I'm going to get back to work. Talk to your social worker if you want to work in sand sorting as well.
+    -> TAHM: Maybe it's all just for show. The prestige of having prestigious humans living and working on their planet.
+        CETTALON: Hah. You make us sound like trophies. Too bad it seems like the majority of them don't find us valuable at all.
+        CETTALON: "🏱︎♋︎❒︎♋︎⬧︎♓︎⧫︎♏︎" is what they call us. It means "parasite". 
+        <<set $translate_parasite to true>>
+
+        TAHM: I haven't heard that yet.
+        CETTALON: You just got here. You will soon enough.
+        CETTALON: Well, it was nice chatting with you. I'm going to get back to work. Talk to your social worker if you want to work in sand sorting as well.
+    -> TAHM: There's limited space here. How else would they decide who to accept?
+        CETTALON: They could use a lottery system? I don't know... I hope I never have to decide on the value of a human life.
+        TAHM: It sounds terrible, but that's common in the medical system. How do you decide who gets a donor organ? Whether you perform emergency operations on an orphaned boy or on the Mayor who funds your hospital?
+        CETTALON: I get it. My partner was a landscaper. They're still stuck on Earth. 
+-> TAHM: A month? I thought Earth refugees only got 8 reds and 7 purples.
+===
