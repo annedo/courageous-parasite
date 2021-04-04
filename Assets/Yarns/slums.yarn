@@ -2,38 +2,52 @@ title: slums_arrival
 ---
 Eventually, the ship makes it to our destination, and I take my first tentative step upon this strange new landscape.
 
-PAUL: Welcome, Tahm.
+PAUL: Welcome to Divine Construct, Tahm.
 
-Gears of endless shapes and sizes turn slowly under my feet, under a smooth, transparent glassy surface. Like a giant skeleton watch.
+Gears of endless shapes and sizes turn slowly under my feet, under a smooth, glassy surface. 
+Like a giant skeleton watch.
 The buildings and structures I can see are made of the same gears, some insulated by glass, and some freely turning in the open air.
+The sky is bathed in a red glow.
 Everything is constantly moving.
 
 PAUL: Your thoughts?
 -> TAHM: It's beautiful.
+    <<set $courage += 1>>
     PAUL: Self agrees. Hope Tahm can stay.
 -> TAHM: It's disorienting.
-    PAUL: Self bring nausea medicinal later?
+    PAUL: Self bring Tahm nausea medicinals?
     TAHM: That would be great, thanks. My house won't look like this will it?
-    PAUL: No. Have begun importing materials from other planets. Strange textures for us too.
+    PAUL: No. Newly importing materials from other planets. 
+    PAUL: Strange textures for us too.
 -> TAHM: It's terrifying.
+    <<set $courage -= 1>>
     PAUL: Self understands. Felt same on Earth. No fear, Tahm, your shelter will be still.
+    <<set $paul_shelter to true>>
 
 Paul leads me to my assigned shelter in the Refugee Sector.
+<<scenechange TentCity>>
 
-...It's a tent. I guess I should have expected something like that. An alien refugee camp is still a refugee camp, after all.
+...It's a tent. 
+I guess I should have expected something like that. 
+An alien refugee camp is still a refugee camp, after all.
 
-The entire Refugee Sector is a tent city. It is a mass of chaos and organic waste that cannot be missed on this planet of clean, systematic metal.
+The entire Refugee Sector is a tent city. 
+It is a mass of chaos and organic waste on this planet of clean, systematic metal.
 
-PAUL: Please, rest now. Long journey ends. Self will return next purple. Bring more supplies for Tahm.
-TAHM: Thank you again, Paul. I really appreciate everything you've done. 
+PAUL: Please, rest now. Self will return next purple. Bring more supplies for Tahm.
+TAHM: Thank you again, Paul. I really appreciate everything you've done.
 
 Paul emits a high pitched, melodic whistle and rolls off into the distance.
 
 I lay on the floor of my tent, using my luggage as a makeshift pillow. 
-Paul was right. Inside, things are still. 
+<<if $paul_shelter is true>>
+Paul was right.
+<<endif>>
+Inside, things are still. 
 Though my mind can still see phantom swirls in the texture of the canvas fabric, they fade away after a few minutes.
 Most importantly - it's dark. 
-The reality of having constant sunlight is sinking in, and I have never been more thankful for the darkness as I slip away into sleep.
+The reality of having constant sunlight is sinking in.
+I have never been more thankful for the darkness as I slip away into sleep.
 <<fade out>>
 [[slums_red1]]
 ===
@@ -45,11 +59,20 @@ Venturing into the bright red sunlight, I see a tired young mother tending to he
 
 CETTALON: Oh, hello neighbor. I'm Cettalon.
 TAHM: Hi, I'm Tahm. I just arrived here today.
-CETTALON: Nice to meet you. Junior and I have been here for about a month in Earth hours. It's kind of hard to tell since it's always daylight here.
+CETTALON: Nice to meet you. Junior and I have been here for about a month in Earth hours. 
+CETTALON: It's hard to be exact since it's always daylight here.
 -> TAHM: What are you doing with this sand here?
     CETTALON: I'm sorting out the different materials for recycling. It's one of the few jobs available for humans here.
     CETTALON: It's tedious, but it's safer than working in a factory or scavenging trash heaps.
     CETTALON: Plus, I get to work from home.
+    -> TAHM: Working in a factory?
+        CETTALON: On the outskirts of the Refugee Sector are experimental factories.
+        CETTALON: Anyone can show up and start working immediately.
+        CETTALON: It's a little competitive though. There's a lot of people in line to work there.
+    -> TAHM: Scavenging trash heaps?
+        CETTALON: I don't know if you've noticed, but humans produce a lot of waste.
+        CETTALON: It builds up faster than it can get recycled.
+        CETTALON: But you can find valuable materials, even food pellets, in the trash heaps.
 -> TAHM: What did you use to do on Earth?
     CETTALON: I was a geologist. Which is why I find the sand here fascinating. The principles of tectonic movements don't apply at all on this planet. What about you?
     TAHM: I was a surgeon. My hospital was destroyed in an airstrike.
@@ -58,7 +81,7 @@ CETTALON: Nice to meet you. Junior and I have been here for about a month in Ear
         CETTALON: Look around. Don't you think the Refugee Sector could use a few people who worked in Waste Management? What's the point of having a bunch of university professors when we don't even have a working plumbing system?
         TAHM: I'm sure they will start expanding the program once there are more opportunities for humans here.
         CETTALON: I hope so. My partner was a landscaper. They're still stuck on Earth.
-        CETTALON: Well, it was nice chatting with you. I'm going to get back to work. Talk to your social worker if you want to work in sand sorting as well.
+        CETTALON: Well, it was nice chatting with you. I'm going to get back to work.
     -> TAHM: Maybe it's all just for show. The prestige of having prestigious humans living and working on their planet.
         CETTALON: Hah. You make us sound like trophies. Too bad it seems like the majority of them don't find us valuable at all.
         CETTALON: "🏱︎♋︎❒︎♋︎⬧︎♓︎⧫︎♏︎" is what they call us. It means "parasite". 
@@ -66,10 +89,51 @@ CETTALON: Nice to meet you. Junior and I have been here for about a month in Ear
 
         TAHM: I haven't heard that yet.
         CETTALON: You just got here. You will soon enough.
-        CETTALON: Well, it was nice chatting with you. I'm going to get back to work. Talk to your social worker if you want to work in sand sorting as well.
+        CETTALON: Well, it was nice chatting with you. I'm going to get back to work.
     -> TAHM: There's limited space here. How else would they decide who to accept?
         CETTALON: They could use a lottery system? I don't know... I hope I never have to decide on the value of a human life.
         TAHM: It sounds terrible, but that's common in the medical system. How do you decide who gets a donor organ? Whether you perform emergency operations on an orphaned boy or on the Mayor who funds your hospital?
         CETTALON: I get it. My partner was a landscaper. They're still stuck on Earth. 
 -> TAHM: A month? I thought Earth refugees only got 8 reds and 7 purples.
 ===
+
+title: pirate_intro
+---
+When I get back to my tent, an A.N.G.E.L. is waiting for me.
+It's not Paul.
+
+THE CAPTAIN: Well, hello again Tahm. I hope you had a pleasant trip.
+TAHM: You were the pilot of the ship that transported us here.
+THE CAPTAIN: Yes. And I'm here to collect.
+TAHM: Collect what? I already paid for my ticket.
+THE CAPTAIN: 🙰♋︎☺︎♋︎🙰♋︎. Ha. Ha. Ha. How much do you think Earth money is worth now?
+THE CAPTAIN: There may not be an Earth after the current war. The exchange rate is awful.
+THE CAPTAIN: Every trip to Earth and back has costs. Fuel. Organic sustenance. Time.
+THE CAPTAIN: You still owe me.
+-> TAHM: This is extortion.
+    THE CAPTAIN: This is the free market.
+-> TAHM: I thought the Construct can manufacture everything.
+    THE CAPTAIN: Not intergalactic currencies.
+THE CAPTAIN: From now on, each purple you will pay me and my crew ₴{}
+
+THE CAPTAIN: You see, I've lived on Earth for centuries. 
+THE CAPTAIN: The struggles of your kind always fascinated me.
+THE CAPTAIN: Earth was like an organic Divine Construct.
+THE CAPTAIN: So many resources on your planet.
+THE CAPTAIN: But hoarded by only a few. Why?
+-> TAHM: There wasn't enough for everyone.
+    <<set $utilitarian += 1>>
+    THE CAPTAIN: Of course there was enough. Enough to fulfill the needs of all your citizens.
+    THE CAPTAIN: The simple truth is that "enough" was never enough.
+    THE CAPTAIN: I admired that about humans.
+-> TAHM: Greed. It was the fatal flaw in our society.
+    <<set $humanitarian += 1>>
+    THE CAPTAIN: I disagree. Greed is good.
+    THE CAPTAIN: The struggle to constantly make more, have more, do more, elevated your species.
+    THE CAPTAIN: The ones who were successful could simply enjoy the bounties of the galaxy.
+    THE CAPTAIN: While the others ran the Earth Construct on their behalf.
+THE CAPTAIN:
+THE CAPTAIN: Our Divine Construct provides everything.
+THE CAPTAIN: But this abundance reduces the value of our goods in the intergalactic trade.
+THE CAPTAIN: I am not satisfied with simply existing.
+THE CAPTAIN: To be a simple cog in the machine.
