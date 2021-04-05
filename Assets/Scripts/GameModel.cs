@@ -74,5 +74,17 @@ namespace Assets.Scripts
         /// Amount of money objects to spawn.
         /// </summary>
         public const int TRASH_GAME_VALUABLES_COUNT = 15;
+
+        /// <summary>
+        /// Skin game
+        /// The amount of money received from one skin piece.
+        /// </summary>
+        public const double SKIN_GAME_MONEY_PER_PIECE = 1.39;
+
+        /// <summary>
+        /// Skin game
+        /// Time in seconds for a round of the skin game.
+        /// </summary>
+        public const int SKIN_GAME_TIME_LIMIT = 30;
     }    
 }
