@@ -180,10 +180,10 @@ THE CAPTAIN: I will see you next red.
 <<elseif $color is "purple">>
 I'm relaxing in my tent when I hear Cettalon calling for me.
 
-CETTALON: Neighbor. I saw the Captain here earlier. So it's got you too, huh?
+CETTALON: Neighbor. I saw the Captain here last red. So it's got you too, huh?
 TAHM: Just how many humans has the Captain transported?
 CETTALON: All of them.
-CETTALON: The Captain is the reason why I still can't pay the citizenship fee for both me and Junior.
+CETTALON: The Captain is why I still can't pay the citizenship fees for me and Junior.
 TAHM: That's terrible.
 -> TAHM: We should stand up for ourselves.
     <<set $courage +=1>>
@@ -286,7 +286,7 @@ title: day4
 ---
 CYCLE {$day}, SHADE {$color}
 <<if $color is "red">>
-The captain awaits his next 
+The captain awaits his next payment.
 <<set $color to "purple">>
 
 <<elseif $color is "purple">>

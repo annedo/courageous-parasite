@@ -118,7 +118,8 @@ PAUL: Your thoughts?
 -> TAHM: It's disorienting.
     PAUL: Self bring Tahm nausea medicinals?
     TAHM: That would be great, thanks. My house won't look like this will it?
-    PAUL: No. Your shelter will be still. <<set $paul_shelter to true>>
+    PAUL: No. Your shelter will be still. 
+    <<set $paul_shelter to true>>
 -> TAHM: It's terrifying.
     <<set $courage -= 1>>
     PAUL: Self understands. Felt same on Earth. No fear, Tahm, your shelter will be still.

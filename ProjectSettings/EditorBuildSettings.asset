@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IntroductionTentCity.unity
     guid: ebaf445a0eb45d04686c4a44464fa925
+  - enabled: 1
+    path: Assets/Scenes/IntroductionPlanet.unity
+    guid: c69f14b29a4a60b4eac9698e6e1dd665
   m_configObjects: {}

@@ -1,0 +1,153 @@
+﻿title: intro
+---
+<<set $citizen_goal to 50>>
+<<set $pirate_goal to 10>>
+<<set $humanitarian to 0>>
+<<set $utilitarian to 0>>
+<<set $courage to 0>>
+<<set $discouraged to 0>>
+
+INTERCOM: 2744fe0e270cfe0ed83dde10fe0e261cfe0e2690fe0e261efe0e261efe0e 270bfe0ed83ddca3fe0ed83ddca3fe0e270bfe0e2620fe0e261cfe0e2620fe0e2744fe0e
+
+As the spaceship took off, my last sight of Earth was of mushroom clouds blooming across the horizon.
+
+My name is Tahm. I used to be a surgeon.
+Then the 23rd Global Nuclear War happened.
+
+INTERCOM: 261cfe0e2620fe0e2744fe0e261cfe0e263cfe0e270bfe0e2620fe0e261dfe0e d83ddca7fe0ed83cdff1fe0e270cfe0ed83ddc4dfe0e261cfe0e
+
+As we soar into the vast expanse of the stars, the roar of the engines simmers to a low hum.
+They are now so quiet I can hear the sobbing of the families around me.
+
+INTERCOM: d83ddca7fe0e2744fe0e270cfe0ed83ddc4cfe0e270bfe0e2639fe0e270bfe0e262afe0e270bfe0e2620fe0e261dfe0e 261efe0e2639fe0e270bfe0e261dfe0e261ffe0e2744fe0e
+
+Now I'm headed for a new planet, to start a new life from scratch.
+-> Talk to the passengers sitting next to me.
+    I look at my fellow refugees. An assortment of groups. Some families. Some are like me, alone.
+    But the mood is too somber. The ones who aren't crying are sleeping.
+    And the ones doing neither have glassy, unfocused stares, as if remembering something a thousand yards away.
+    I can't think of anything to say.
+    <<set $humanitarian += 1>>
+-> Sit in silence and try to forget about what I'm leaving behind.
+    I close my eyes, and will myself to forget. 
+    The friends and family who couldn't go with me.
+    The feeling of grass between my toes and the smell of rain.
+    The only thing that matters is now.
+    <<set $utilitarian += 1>>
+
+We fly in silence for a while, as the ship stabilizes and the finality of our decisions sinks in.
+<<wait 2>>
+
+Eventually the door to another cabin slides open.
+The A.N.G.E.L.S clang against the metal floors as they roll over to us.
+
+d83ddd46fe0e2752fe0e2b27fe0e264bfe0e: Hello, Tahm.
+d83ddd46fe0e2752fe0e2b27fe0e264bfe0e: Self is d83ddd46fe0e2752fe0e2b27fe0e264bfe0e. For humans, self is "Paul".
+TAHM: Hi, Paul.
+PAUL: Paul is Tahm's designated social worker.
+PAUL: Sorry for Earth.
+TAHM: Yeah.
+INTERCOM: 2744fe0e270bfe0ed83ddca3fe0e261cfe0e 2744fe0e2690fe0e 270cfe0e263cfe0e263cfe0e270bfe0e271efe0e270cfe0e2639fe0ed83dddb3fe0e d83dddd0fe0e d83ddca7fe0e261ffe0e270cfe0ed83ddc4efe0e261cfe0ed83ddca7fe0e
+
+PAUL: Says we reach planet in 4 purples. To Tahm, is 64 Earth hours.
+TAHM: That's quite a long time. 
+PAUL: You have much to learn.
+PAUL: New planet. New language. New culture. New time cycles.
+PAUL: Do you fear, Tahm?
+-> TAHM: Yes.... it all seems so daunting.
+    PAUL: Expected. Will be ok. Self will help Tahm.
+    <<set $discouraged += 1>>
+-> TAHM: No.... all I can do is my best to survive.
+    PAUL: Brave. Good quality. Must try hard.
+    <<set $courage += 1>>
+-> TAHM: I don't know.... too much has happened to think clearly.
+    PAUL: Expected. Tahm lose home planet. Self will help Tahm.
+[[exposition]]
+===
+
+title: exposition
+---
+PAUL: First, about planet. Constant sun. 
+PAUL: Time is by color of light. 
+PAUL: Red to purple. Purple to red. Forever bright.
+PAUL: Humans receive free shelter for 8 reds and 7 purples.
+PAUL: After that, must pay citizenship fee. ₴{$citizen_goal}.
+-> TAHM: Sounds reasonable enough. I was a doctor back on Earth.
+Paul rolls back and forth nervously. At least, I think it's nervousness.
+PAUL: Ah... no organics on planet.
+TAHM: At all?
+PAUL: First organics, humans. Before, all metal.
+PAUL: Planet is ancient construct. Divine. Can manufacture anything.
+PAUL: Human nutrients. Medicinal gel. Water.
+PAUL: Purpose of all beings to run construct.
+-> TAHM: But I wanted to help people. 
+    <<set $humanitarian += 1>>
+    PAUL: Help run construct. Helps everyone.
+    TAHM: Aren't you a social worker?
+    PAUL: Yes. But self joins construct when not with humans.
+-> TAHM: Beats dying in a nuclear wasteland at least.
+    <<set $utilitarian += 1>>
+    PAUL: No fear. Construct complex. But running is basic.
+TAHM: So what kind of work will I be doing?
+PAUL: Sometimes, gears fail. We replace with own bodies. Until replacement manufactured.
+PAUL: Not possible for human. Too soft. Too fragile. Must find other work.
+PAUL: We build new constructs. Experimental. Humans turn small gears. Or process recycling.
+PAUL: Humans have great potential. We will learn from each other.
+PAUL: Now, let us practice the language of A.N.G.E.L.S.
+
+[[slums_arrival]]
+===
+
+title: slums_arrival
+---
+<<setscene DialogueCustom IntroductionPlanet>>
+
+Eventually, the ship makes it to our destination, and I take my first tentative step upon this strange new landscape.
+
+PAUL: Welcome to Divine Construct, Tahm.
+
+Gears of endless shapes and sizes turn slowly under my feet, under a smooth, glassy surface. 
+Like a giant skeleton watch.
+The sky is bathed in a red glow.
+Everything is constantly moving.
+
+PAUL: Your thoughts?
+-> TAHM: It's beautiful.
+    <<set $courage += 1>>
+    PAUL: Self agrees. Hope Tahm can stay.
+-> TAHM: It's disorienting.
+    PAUL: Self bring Tahm nausea medicinals?
+    TAHM: That would be great, thanks. My house won't look like this will it?
+    PAUL: No. Your shelter will be still. <<set $paul_shelter to true>>
+-> TAHM: It's terrifying.
+    <<set $courage -= 1>>
+    PAUL: Self understands. Felt same on Earth. No fear, Tahm, your shelter will be still.
+    <<set $paul_shelter to true>>
+
+Paul leads me to my assigned shelter in the Refugee Sector.
+<<<<<<< Updated upstream
+<<setscene DialogueCustom IntroductionTentCity>>
+=======
+<<setscene DialogueCustom MainScene>>
+>>>>>>> Stashed changes
+
+...It's a tent. 
+I guess I should have expected something like that. 
+An alien refugee camp is still a refugee camp, after all.
+
+PAUL: Please, rest now. Self will return next purple. Bring more supplies for Tahm.
+TAHM: Thank you again, Paul. I really appreciate everything you've done.
+
+Paul emits a high pitched, melodic whistle and rolls off into the distance.
+
+I lay on the floor of my tent, using my luggage as a makeshift pillow. 
+<<if $paul_shelter is true>>
+Paul was right.
+<<endif>>
+Inside, things are still. Most importantly - it's dark.
+The reality of having constant sunlight is sinking in.
+I have never been more thankful for the darkness as I slip away into sleep.
+<<set $day to 1>>
+<<set $color to "red">>
+<<setscene DialogueCustom MainScene>>
+===

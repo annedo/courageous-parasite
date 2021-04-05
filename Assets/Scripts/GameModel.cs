@@ -5,10 +5,10 @@ namespace Assets.Scripts
 {
     public enum CharacterName
     {
-        DukeTheCeo, // PC
-        Cog1, // NPCs 
-        what3,
-        what4
+        TAHM, // PC
+        CETTALON, // NPCs 
+        PAUL,
+        CAPTAIN
     }
 
     public static class GameModel
@@ -23,20 +23,34 @@ namespace Assets.Scripts
         public static IReadOnlyDictionary<CharacterName, Speaker> PlayerSpeaker 
             = new Dictionary<CharacterName, Speaker>()
         {
+            {
+                CharacterName.TAHM, new Speaker()
                 {
-                    CharacterName.DukeTheCeo, new Speaker()
-                    {
-                        Sprites = Resources.LoadAll("Player/Sprites", typeof(Sprite)),
-                        Audio = Resources.Load("Player/voice") as AudioSource
-                    }
-                },
-                {
-                    CharacterName.Cog1, new Speaker()
-                    {
-                        Sprites = Resources.LoadAll("Cog1/Sprites", typeof(Sprite)),
-                        Audio = Resources.Load("Cog1/voice") as AudioSource
-                    }
+                    Sprites = Resources.LoadAll("Player/Sprites", typeof(Sprite)),
+                    VoiceClip = Resources.Load("Player/voice") as AudioClip
                 }
+            },
+            {
+                CharacterName.CETTALON, new Speaker()
+                {
+                    Sprites = Resources.LoadAll("Cettalon/Sprites", typeof(Sprite)),
+                    VoiceClip = Resources.Load("Cettalon/voice") as AudioClip
+                }
+            },
+            {
+                CharacterName.PAUL, new Speaker()
+                {
+                    Sprites = Resources.LoadAll("Paul/Sprites", typeof(Sprite)),
+                    VoiceClip = Resources.Load("Paul/voice") as AudioClip
+                }
+            },
+            {
+                CharacterName.CAPTAIN, new Speaker()
+                {
+                    Sprites = Resources.LoadAll("Captain/Sprites", typeof(Sprite)),
+                    VoiceClip = Resources.Load("Captain/voice") as AudioClip
+                }
+            },
         };
 #pragma warning restore UNT0010 // MonoBehaviour instance creation
 

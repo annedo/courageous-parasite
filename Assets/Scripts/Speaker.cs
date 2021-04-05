@@ -4,39 +4,42 @@ using UnityEngine;
 public class Speaker : MonoBehaviour
 {
     public Object[] Sprites;
-
-    // Tone
-    // SoundObject initialized by Range
-    public AudioSource Audio;
+    public AudioClip VoiceClip;
 
     private SpriteDisplayer _spriteDisplayer;
+    private AudioSource _audioSource;
 
     public bool Speaking;
 
-    private void Start()
+    private void Awake()
     {
         _spriteDisplayer = gameObject.GetComponent<SpriteDisplayer>();
+        _audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     private int LastSpriteIndex = 0;
     private int FrameCount = 0;
     public void SetSprite()
     {
-        if (Speaking && FrameCount == GameModel.SPEAKER_FRAMERATE)
+        if (Speaking && FrameCount >= GameModel.SPEAKER_FRAMERATE)
         {
-            // 50/50 chance between n+1 and n+2
-            var newIndex = ((LastSpriteIndex + 1) % Sprites.Length);// + Random.Range(0, 1);
+            var newIndex = ((LastSpriteIndex + 1) % Sprites.Length);
             _spriteDisplayer.SetSprite(Sprites[newIndex]);
 
-            // TODO - Play Audio
+            _audioSource.PlayOneShot(VoiceClip);
 
             FrameCount = 0;
             LastSpriteIndex = newIndex;
         }
 
-        if (!Speaking)
+        if (!Speaking && Sprites.Length > 0)
             _spriteDisplayer.SetSprite(Sprites[0]);
 
         FrameCount++;
+    }
+
+    public void HideSprite()
+    {
+        _spriteDisplayer.HideSprite();
     }
 }

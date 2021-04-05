@@ -17,6 +17,12 @@ namespace Assets.Scripts
 
         private Sprite _currentSprite;
         public void SetSprite(Object sprite)
-            => _currentSprite = sprite as Sprite;
+        {
+            _currentSprite = sprite as Sprite;
+            spriteRenderer.enabled = true;
+        }
+
+        public void HideSprite()
+            => spriteRenderer.enabled = false;
     }
 }
