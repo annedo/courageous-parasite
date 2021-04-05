@@ -1,5 +1,11 @@
-title: hub_node
+﻿title: hub_node
 ---
+<<if $day is null>>
+<<set $day to 1>>
+<<endif>>
+<<if $color is null>>
+<<set $color to "red">>
+<<endif>>
 <<if $day is 1>>
 [[day1]]
 <<elseif $day is 2>>
@@ -64,7 +70,8 @@ CYCLE {$day}, SHADE {$color}
 <<if $color is "red">>
 <<set $factory_open to false>>
 <<set $trash_open to false>>
-<<set $translate_parasite to "🏱︎♋︎❒︎♋︎⬧︎♓︎⧫︎♏︎">>
+<<set $translate_parasite to "d83cdff1fe0e264bfe0e2752fe0e264bfe0e2b27fe0e2653fe0e29ebfe0e264ffe0e">>
+
 I am awoken by the sound of a woman humming outside of my tent.
 Venturing into the bright red sunlight, I see a tired young mother tending to her baby and sorting what looks like a large pile of sand.
 
@@ -86,30 +93,6 @@ CETTALON: It's hard to be exact since it's always daylight here.
         CETTALON: I don't know if you've noticed, but humans produce a lot of waste.
         CETTALON: It builds up faster than it can get recycled.
         CETTALON: But you can find valuable materials, even food pellets, in the trash heaps.
--> TAHM: What did you use to do on Earth?
-    CETTALON: I was a geologist. Which is why I find the sand here fascinating. The principles of tectonic movements don't apply at all on this planet. What about you?
-    TAHM: I was a surgeon. My hospital was destroyed in an airstrike.
-    CETTALON: Hmmm. It seems like the A.N.G.E.L.S. still only accept highly educated people from Earth. Yet there are no jobs suitable for our qualifications here... So what's the point? Why not just let anyone from Earth come?
-    -> TAHM: Maybe they see humans rebuilding our society on their planet.
-        <<set $humanitarian += 1>>
-        <<set $courage += 1>>
-        CETTALON: Look around. Don't you think the Refugee Sector could use a few people who worked in Waste Management? What's the point of having a bunch of university professors when we don't even have a working plumbing system?
-        TAHM: I'm sure they will start expanding the program once there are more opportunities for humans here.
-        CETTALON: I hope so. My partner was a landscaper. They're still stuck on Earth.
-    -> TAHM: Maybe it's all just for show. The prestige of having prestigious humans living and working on their planet.
-        <<set $discouraged += 1>>
-        CETTALON: Hah. You make us sound like trophies. Too bad it seems like the majority of them don't find us valuable at all.
-        CETTALON: "🏱︎♋︎❒︎♋︎⬧︎♓︎⧫︎♏︎" is what they call us. It means "parasite". 
-        <<set $translate_parasite to "parasite">>
-        TAHM: I haven't heard that yet.
-        CETTALON: You just got here. You will soon enough.
-    -> TAHM: There's limited space here. How else would they decide who to accept?
-        <<set $utilitarian += 1>>
-        CETTALON: They could use a lottery system? I don't know... I hope I never have to decide on the value of a human life.
-        TAHM: It sounds terrible, but that's common in the medical system. 
-        TAHM: How do you decide who gets a donor organ? 
-        TAHM: Do you assign the top ER surgeon to an orphaned boy or to the Mayor who funds your hospital?
-        CETTALON: I get it. My partner was a landscaper. They're still stuck on Earth.
 -> TAHM: A month? I thought Earth refugees only got 8 reds and 7 purples.
     CETTALON: ... They used to be a lot more generous.
     CETTALON: When I got here, they gave us 33 reds and 33 purples.
@@ -175,7 +158,7 @@ THE CAPTAIN: Well, hello again Tahm. I hope you had a pleasant trip.
 TAHM: You were the pilot of the ship that transported us here.
 THE CAPTAIN: Yes. And I'm here to collect.
 TAHM: Collect what? I already paid for my ticket.
-THE CAPTAIN: 🙰♋︎☺︎♋︎🙰♋︎. Ha. Ha. Ha. How much do you think Earth money is worth now?
+THE CAPTAIN: \ud83d\ude70\u264b\u263a\u264b\ud83d\ude70\u264b. Ha. Ha. Ha. How much do you think Earth money is worth now?
 THE CAPTAIN: There may not be an Earth after the current war. The exchange rate is awful.
 THE CAPTAIN: Every trip to Earth and back has costs. Fuel. Organic sustenance. Time.
 THE CAPTAIN: You still owe me.
@@ -203,14 +186,20 @@ PAUL: All is well?
 -> TAHM: No, it's too hard to make money.
     PAUL: Unfortunate. But self sees Tahm work hard.
     PAUL: Hard work is always rewarded.
-PAUL: Self found no recyclables today. Only meal pellets this color.
+PAUL: Self found no recyclables today. Only meal pellets.
+<<set $money += 2>>
 TAHM: It's okay Paul. I know you don't even have to help me at all.
 TAHM: I appreciate that you care enough to try.
 PAUL: Altruism is our way. Divine Construct provides all.
 TAHM: I don't think all the A.N.G.E.L.S. feel the same way.
 PAUL: ...
-PAUL: They simply do not realize the value of human work.
-PAUL: All life powers Divine Construct.
+PAUL: Complex issue.
+PAUL: Self believes it is due to ignorance.
+PAUL: A.N.G.E.L.S may yet change.
+PAUL: Be not disheartened.
+TAHM: Good light, Paul.
+Paul leaves me alone once again.
+<<set $trash_full to true>>
 <<set $color to "red">>
 <<set $day += 1>>
 <<endif>>
@@ -240,10 +229,37 @@ THE CAPTAIN: Tahm. Your payment.
 <<endif>>
 TAHM: Why are you doing this?
 THE CAPTAIN: As a human, you should already know why.
+<<set $trash_full to false>>
 <<set $color to "purple">>
 
 <<elseif $color is "purple">>
-TEXT GOES HERE
+I return to the refugee sector to see Cettalon sorting sand again.
+
+CETTALON: And this, Junior, is phosphorus. Hello, neighbor!
+-> TAHM: Cettalon, what did you use to do on Earth?
+    CETTALON: I was a geologist. Which is why I find the sand here fascinating. The principles of tectonic movements don't apply at all on this planet. What about you?
+    TAHM: I was a surgeon. My hospital was destroyed in an airstrike.
+    CETTALON: Hmmm. It seems like the A.N.G.E.L.S. still only accept highly educated people from Earth. Yet there are no jobs suitable for our qualifications here... So what's the point? Why not just let anyone from Earth come?
+    -> TAHM: Maybe they see humans rebuilding our society on their planet.
+        <<set $humanitarian += 1>>
+        <<set $courage += 1>>
+        CETTALON: Look around. Don't you think the Refugee Sector could use a few people who worked in Waste Management? What's the point of having a bunch of university professors when we don't even have a working plumbing system?
+        TAHM: I'm sure they will start expanding the program once there are more opportunities for humans here.
+        CETTALON: I hope so. My partner was a landscaper. They're still stuck on Earth.
+    -> TAHM: Maybe it's all just for show. The prestige of having prestigious humans living and working on their planet.
+        <<set $discouraged += 1>>
+        CETTALON: Hah. You make us sound like trophies. Too bad it seems like the majority of them don't find us valuable at all.
+        CETTALON: "d83cdff1fe0e264bfe0e2752fe0e264bfe0e2b27fe0e2653fe0e29ebfe0e264ffe0e" is what they call us. It means "parasite". 
+        <<set $translate_parasite to "parasite">>
+        TAHM: I haven't heard that yet.
+        CETTALON: You just got here. You will soon enough.
+    -> TAHM: There's limited space here. How else would they decide who to accept?
+        <<set $utilitarian += 1>>
+        CETTALON: They could use a lottery system? I don't know... I hope I never have to decide on the value of a human life.
+        TAHM: It sounds terrible, but that's common in the medical system. 
+        TAHM: How do you decide who gets a donor organ? 
+        TAHM: Do you assign the top ER surgeon to an orphaned boy or to the Mayor who funds your hospital?
+        CETTALON: I get it. My partner was a landscaper. They're still stuck on Earth.
 <<set $color to "red">>
 <<set $day += 1>>
 <<endif>>

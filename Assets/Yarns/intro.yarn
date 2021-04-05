@@ -7,19 +7,19 @@
 <<set $courage to 0>>
 <<set $discouraged to 0>>
 
-INTERCOM: ❄︎✌︎😐︎☜︎⚐︎☞︎☞︎ ✋︎💣︎💣︎✋︎☠︎☜︎☠︎❄︎
+INTERCOM: 2744fe0e270cfe0ed83dde10fe0e261cfe0e2690fe0e261efe0e261efe0e 270bfe0ed83ddca3fe0ed83ddca3fe0e270bfe0e2620fe0e261cfe0e2620fe0e2744fe0e
 
 As the spaceship took off, my last sight of Earth was of mushroom clouds blooming across the horizon.
 
 My name is Tahm. I used to be a surgeon.
 Then the 23rd Global Nuclear War happened.
 
-INTERCOM: ☜︎☠︎❄︎☜︎☼︎✋︎☠︎☝︎ 💧︎🏱︎✌︎👍︎☜︎
+INTERCOM: 261cfe0e2620fe0e2744fe0e261cfe0e263cfe0e270bfe0e2620fe0e261dfe0e d83ddca7fe0ed83cdff1fe0e270cfe0ed83ddc4dfe0e261cfe0e
 
 As we soar into the vast expanse of the stars, the roar of the engines simmers to a low hum.
 They are now so quiet I can hear the sobbing of the families around me.
 
-INTERCOM: 💧︎❄︎✌︎👌︎✋︎☹︎✋︎☪︎✋︎☠︎☝︎ ☞︎☹︎✋︎☝︎☟︎❄︎
+INTERCOM: d83ddca7fe0e2744fe0e270cfe0ed83ddc4cfe0e270bfe0e2639fe0e270bfe0e262afe0e270bfe0e2620fe0e261dfe0e 261efe0e2639fe0e270bfe0e261dfe0e261ffe0e2744fe0e
 
 Now I'm headed for a new planet, to start a new life from scratch.
 -> Talk to the passengers sitting next to me.
@@ -42,14 +42,14 @@ We fly in silence for a while, as the ship stabilizes and the finality of our de
 Eventually the door to another cabin slides open.
 The A.N.G.E.L.S clang against the metal floors as they roll over to us.
 
-🕆︎❒︎⬧︎♋︎: Hello, Tahm.
-🕆︎❒︎⬧︎♋︎: Self is 🕆︎❒︎⬧︎♋︎. For humans, self is "Paul".
+d83ddd46fe0e2752fe0e2b27fe0e264bfe0e: Hello, Tahm.
+d83ddd46fe0e2752fe0e2b27fe0e264bfe0e: Self is d83ddd46fe0e2752fe0e2b27fe0e264bfe0e. For humans, self is "Paul".
 TAHM: Hi, Paul.
 PAUL: Paul is Tahm's designated social worker.
 PAUL: Sorry for Earth.
 TAHM: Yeah.
 
-INTERCOM: ❄︎✋︎💣︎☜︎ ❄︎⚐︎ ✌︎☼︎☼︎✋︎✞︎✌︎☹︎🖳︎ 🗐︎ 💧︎☟︎✌︎👎︎☜︎💧︎
+INTERCOM: 2744fe0e270bfe0ed83ddca3fe0e261cfe0e 2744fe0e2690fe0e 270cfe0e263cfe0e263cfe0e270bfe0e271efe0e270cfe0e2639fe0ed83dddb3fe0e d83dddd0fe0e d83ddca7fe0e261ffe0e270cfe0ed83ddc4efe0e261cfe0ed83ddca7fe0e
 
 PAUL: Says we reach planet in 4 purples. To Tahm, is 64 Earth hours.
 TAHM: That's quite a long time. 
@@ -97,7 +97,7 @@ PAUL: We build new constructs. Experimental. Humans turn small gears. Or process
 PAUL: Self knows humans have great potential. We will learn from each other.
 PAUL: Perhaps create something new.
 PAUL: Perhaps, one day, enough organics for doctors too.
-PAUL: Now, let us practice the language of 🕈︎□︎❒︎♎︎⬧︎.
+PAUL: Now, let us practice the language of A.N.G.E.L.S.
 
 <<TODO fade out>>
 [[slums_arrival]]
