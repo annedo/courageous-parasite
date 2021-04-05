@@ -42,8 +42,7 @@ I won't be able to work here this color.
 <<set $factory_open to false>>
 [[work]]
 <<else>>
-<<scenechange factory_game>>
-[[hub_node]]
+<<setscene DialogueCustom CogGameScene>>
 <<endif>>
 ===
 
@@ -55,8 +54,7 @@ I won't be able to scavenge this color.
 <<set $trash_open to false>>
 [[work]]
 <<else>>
-<<scenechange trash_game>>
-[[hub_node]]
+<<setscene DialogueCustom TrashGameScene>>
 <<endif>>
 ===
 
