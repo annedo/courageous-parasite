@@ -136,7 +136,7 @@ PAUL: Yes. Found in recycling heaps. Please accept.
     PAUL: Yes, you can. Self has no need. Divine Construct provides all.
     TAHM: Thank you, Paul.
 -> TAHM: Thank you, Paul.
-PAUL: Enjoy rest, Tahm. Will return next purple.
+PAUL: Enjoy rest, Tahm. Will return in 3 purples.
 Paul rolls away.
 I enter my tent and collapse on my bedroll for a quick nap.
 There's still some time left in this purple when I wake up.
@@ -158,7 +158,7 @@ THE CAPTAIN: Well, hello again Tahm. I hope you had a pleasant trip.
 TAHM: You were the pilot of the ship that transported us here.
 THE CAPTAIN: Yes. And I'm here to collect.
 TAHM: Collect what? I already paid for my ticket.
-THE CAPTAIN: \ud83d\ude70\u264b\u263a\u264b\ud83d\ude70\u264b. Ha. Ha. Ha. How much do you think Earth money is worth now?
+THE CAPTAIN: d83dde70264b263a264bd83dde70264b. Ha. Ha. Ha. How much do you think Earth money is worth now?
 THE CAPTAIN: There may not be an Earth after the current war. The exchange rate is awful.
 THE CAPTAIN: Every trip to Earth and back has costs. Fuel. Organic sustenance. Time.
 THE CAPTAIN: You still owe me.
@@ -178,27 +178,32 @@ THE CAPTAIN: I will see you next red.
 <<set $color to "purple">>
 
 <<elseif $color is "purple">>
-I return from my tasks to find Paul waiting for me with more supplies.
-PAUL: Hello Tahm. 
-PAUL: All is well?
--> TAHM: Yes, I'm on track for citizenship.
-    PAUL: Happy to hear that.
--> TAHM: No, it's too hard to make money.
-    PAUL: Unfortunate. But self sees Tahm work hard.
-    PAUL: Hard work is always rewarded.
-PAUL: Self found no recyclables today. Only meal pellets.
-<<set $money += 2>>
-TAHM: It's okay Paul. I know you don't even have to help me at all.
-TAHM: I appreciate that you care enough to try.
-PAUL: Altruism is our way. Divine Construct provides all.
-TAHM: I don't think all the A.N.G.E.L.S. feel the same way.
-PAUL: ...
-PAUL: Complex issue.
-PAUL: Self believes it is due to ignorance.
-PAUL: A.N.G.E.L.S may yet change.
-PAUL: Be not disheartened.
-TAHM: Good light, Paul.
-Paul leaves me alone once again.
+I'm relaxing in my tent when I hear Cettalon calling for me.
+
+CETTALON: Neighbor. I saw the Captain here earlier. So it's got you too, huh?
+TAHM: Just how many humans has the Captain transported?
+CETTALON: All of them.
+CETTALON: The Captain is the reason why I still can't pay the citizenship fee for both me and Junior.
+TAHM: That's terrible.
+-> TAHM: We should stand up for ourselves.
+    <<set $courage +=1>>
+    CETTALON: No way. I can't risk the life of my child.
+-> TAHM: Can't our social workers do anything about it?
+    CETTALON: ... Mine was designated for recycling after I tried to tell them.
+    CETTALON: They never got around to assigning me a new one.
+-> TAHM: But we have no power here. There's nothing we can do.
+    <<set $discouraged += 1>>
+    CETTALON: All I can do is try to protect Junior.
+CETTALON: The ones who don't cooperate disappear. I think they're forced to go back to Earth.
+TAHM: That's the best case scenario.
+CETTALON: I know they aren't dying here. Human deaths are a big deal, even for A.N.G.E.L.S.
+CETTALON: They'd never seen decomposition before.
+CETTALON: And everything gets recycled in the Divine Construct.
+-> TAHM: We should help each other. Let me know if you need anything.
+    CETTALON: Thanks.
+-> TAHM: We should look out for ourselves before anything else.
+    CETTALON: Agreed.
+Cettalon returns to the safety and darkness of her tent.
 <<set $trash_full to true>>
 <<set $color to "red">>
 <<set $day += 1>>
@@ -224,11 +229,16 @@ THE CAPTAIN: Tahm. Your payment.
     THE CAPTAIN: And this is for the missing amount.
     The massive A.N.G.E.L. suddenly charges me, knocking me to the ground.
     They deliberately roll their full weight over my foot, snapping the bones within.
+    <<set $broken_foot to true>>
     TAHM: FUCK!!
     THE CAPTAIN: Next time you will not get off so easily.
 <<endif>>
 TAHM: Why are you doing this?
 THE CAPTAIN: As a human, you should already know why.
+<<if $broken_foot is true>>
+I splint my foot as best I can.
+It's not too bad. I can still limp to work.
+<<endif>>
 <<set $trash_full to false>>
 <<set $color to "purple">>
 
@@ -236,6 +246,9 @@ THE CAPTAIN: As a human, you should already know why.
 I return to the refugee sector to see Cettalon sorting sand again.
 
 CETTALON: And this, Junior, is phosphorus. Hello, neighbor!
+<<if $broken_foot is true>>
+CETTALON: Yikes. You look terrible. Captain broke your foot, huh?
+<<endif>>
 -> TAHM: Cettalon, what did you use to do on Earth?
     CETTALON: I was a geologist. Which is why I find the sand here fascinating. The principles of tectonic movements don't apply at all on this planet. What about you?
     TAHM: I was a surgeon. My hospital was destroyed in an airstrike.
@@ -253,6 +266,7 @@ CETTALON: And this, Junior, is phosphorus. Hello, neighbor!
         <<set $translate_parasite to "parasite">>
         TAHM: I haven't heard that yet.
         CETTALON: You just got here. You will soon enough.
+        CETTALON: My partner was a landscaper. They're still stuck on Earth. Some humans aren't worth saving to them.
     -> TAHM: There's limited space here. How else would they decide who to accept?
         <<set $utilitarian += 1>>
         CETTALON: They could use a lottery system? I don't know... I hope I never have to decide on the value of a human life.
@@ -260,6 +274,8 @@ CETTALON: And this, Junior, is phosphorus. Hello, neighbor!
         TAHM: How do you decide who gets a donor organ? 
         TAHM: Do you assign the top ER surgeon to an orphaned boy or to the Mayor who funds your hospital?
         CETTALON: I get it. My partner was a landscaper. They're still stuck on Earth.
+CETTALON: It is what it is.
+She returns to her work.
 <<set $color to "red">>
 <<set $day += 1>>
 <<endif>>
@@ -270,11 +286,31 @@ title: day4
 ---
 CYCLE {$day}, SHADE {$color}
 <<if $color is "red">>
-TEXT GOES HERE
+The captain awaits his next 
 <<set $color to "purple">>
 
 <<elseif $color is "purple">>
-TEXT GOES HERE
+I return from my tasks to find Paul waiting for me with more supplies.
+PAUL: Hello Tahm. 
+PAUL: All is well?
+-> TAHM: Yes, I'm on track for citizenship.
+    PAUL: Happy to hear that.
+-> TAHM: No, it's too hard to make money.
+    PAUL: Unfortunate. But self sees Tahm work hard.
+    PAUL: Hard work is always rewarded.
+PAUL: Self found no recyclables today. Only meal pellets.
+<<set $money += 2>>
+TAHM: It's okay Paul. I know you don't even have to help me at all.
+TAHM: I appreciate that you care enough to try.
+PAUL: Altruism is our way. Divine Construct provides all.
+TAHM: I don't think all the A.N.G.E.L.S. feel the same way.
+PAUL: ...
+PAUL: Complex issue.
+PAUL: Self believes it is due to ignorance.
+PAUL: A.N.G.E.L.S may yet change.
+PAUL: Be not disheartened.
+TAHM: Good light, Paul.
+Paul leaves me alone once again.
 <<set $color to "red">>
 <<set $day += 1>>
 <<endif>>
