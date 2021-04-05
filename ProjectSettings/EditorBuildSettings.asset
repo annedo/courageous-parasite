@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SkinGraftGameScene.unity
     guid: 8dd936ac9000d7f43afc3211a7e15cd5
+  - enabled: 1
+    path: Assets/Scenes/Introduction.unity
+    guid: dfe46a7848235804c8f9bf9181b5d952
+  - enabled: 1
+    path: Assets/Scenes/IntroductionTentCity.unity
+    guid: ebaf445a0eb45d04686c4a44464fa925
   m_configObjects: {}
