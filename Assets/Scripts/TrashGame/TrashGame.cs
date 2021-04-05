@@ -13,7 +13,7 @@ namespace Assets.Scripts.TrashGame
         public Text TimerText;
 
         public List<TrashObject> TrashObjects;
-        public List<MoneyObject> MoneyObjects;
+        public List<MoneyObject> MoneyObjects;        
 
         public double CurrentMoney = 0;
 

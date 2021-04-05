@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DialogueScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/TrashGameScene.unity
+    guid: 257aad332efc3734ab55a9452703232c
+  - enabled: 1
+    path: Assets/Scenes/SkinGraftGameScene.unity
+    guid: 8dd936ac9000d7f43afc3211a7e15cd5
   m_configObjects: {}
