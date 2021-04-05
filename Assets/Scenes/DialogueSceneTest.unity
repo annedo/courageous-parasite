@@ -654,7 +654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5935829474855343396, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 555.6
+      value: 599.60004
       objectReference: {fileID: 0}
     - target: {fileID: 5935829474855343396, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: m_SizeDelta.y
@@ -662,7 +662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5935829474855343396, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 277.8
+      value: 299.80002
       objectReference: {fileID: 0}
     - target: {fileID: 5935829474855343396, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -694,7 +694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5935829475398715329, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: startNode
-      value: slums_arrival
+      value: hub_node
       objectReference: {fileID: 0}
     - target: {fileID: 5935829475398715329, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: dialogueUI
@@ -726,7 +726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5935829475398715335, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: defaultVariables.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5935829475398715335, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: defaultVariables.Array.data[0].name
@@ -737,12 +737,32 @@ PrefabInstance:
       value: pirate_goal
       objectReference: {fileID: 0}
     - target: {fileID: 5935829475398715335, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
+      propertyPath: defaultVariables.Array.data[2].name
+      value: day
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935829475398715335, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
+      propertyPath: defaultVariables.Array.data[3].name
+      value: color
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935829475398715335, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
+      propertyPath: defaultVariables.Array.data[3].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935829475398715335, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: defaultVariables.Array.data[0].value
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5935829475398715335, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: defaultVariables.Array.data[1].value
-      value: 50
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935829475398715335, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
+      propertyPath: defaultVariables.Array.data[2].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935829475398715335, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
+      propertyPath: defaultVariables.Array.data[3].value
+      value: red
       objectReference: {fileID: 0}
     - target: {fileID: 5935829475522760372, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: m_AnchorMax.y
