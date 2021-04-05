@@ -426,7 +426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4068380849537614946, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: m_Name
-      value: Dialogue
+      value: DialogueCustom
       objectReference: {fileID: 0}
     - target: {fileID: 4330893224505966732, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -654,7 +654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5935829474855343396, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 599.60004
+      value: 826.8
       objectReference: {fileID: 0}
     - target: {fileID: 5935829474855343396, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: m_SizeDelta.y
@@ -662,7 +662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5935829474855343396, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 299.80002
+      value: 413.4
       objectReference: {fileID: 0}
     - target: {fileID: 5935829474855343396, guid: 00f112712d5d7814bbce27169b051d8a, type: 3}
       propertyPath: m_AnchoredPosition.y

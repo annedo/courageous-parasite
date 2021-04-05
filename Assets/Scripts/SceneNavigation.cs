@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Yarn.Unity;
 
 public class SceneNavigation : MonoBehaviour
 {
+    
     public string SceneToTravelTo;
 
     // Start is called before the first frame update
@@ -15,6 +17,12 @@ public class SceneNavigation : MonoBehaviour
     void Update()
     {
         
+    }
+
+    [YarnCommand("setscene")]
+    public void SetScene(string SceneToTravelTo)
+    {
+        SceneManager.LoadScene(SceneToTravelTo);
     }
 
     private void OnMouseDown()
