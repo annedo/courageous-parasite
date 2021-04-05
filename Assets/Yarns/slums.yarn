@@ -1,0 +1,383 @@
+title: hub_node
+---
+<<if $day is 1>>
+[[day1]]
+<<elseif $day is 2>>
+[[day2]]
+<<elseif $day is 3>>
+[[day3]]
+<<elseif $day is 4>>
+[[day4]]
+<<elseif $day is 5>>
+[[day5]]
+<<elseif $day is 6>>
+[[day6]]
+<<elseif $day is 7>>
+[[day7]]
+<<elseif $day is 8>>
+[[day8]]
+<<endif>>
+===
+
+title: work
+---
+I should get to work.
+-> Find a factory job. <<if $factory_open is true>>
+    [[factory]]
+-> Scavenge the trash heaps. <<if $trash_open is true>>
+    [[trash]]
+-> Go to the tanning salon. <<if $salon_open is true>>
+    [[salon]]
+<<if $factory_open is false && $trash_open is false && $salon_open is false>>
+-> I can't find a job anywhere. I'll just go for a walk.
+    RANDOM EVENT
+<<endif>>
+===
+
+title: factory
+---
+<<if $factory_full is true>>
+The factory zones are packed with desperate humans waiting for an opening.
+I won't be able to work here this color.
+<<set $factory_open to false>>
+[[work]]
+<<else>>
+<<scenechange factory_game>>
+[[hub_node]]
+<<endif>>
+===
+
+title: trash
+---
+<<if $trash_full is true>>
+The trash heaps are teeming with scavengers.
+I won't be able to scavenge this color.
+<<set $trash_open to false>>
+[[work]]
+<<else>>
+<<scenechange trash_game>>
+[[hub_node]]
+<<endif>>
+===
+
+title: day1
+---
+CYCLE {$day}, SHADE {$color}
+<<if $color is "red">>
+<<set $factory_open to false>>
+<<set $trash_open to false>>
+<<set $translate_parasite to "🏱︎♋︎❒︎♋︎⬧︎♓︎⧫︎♏︎">>
+I am awoken by the sound of a woman humming outside of my tent.
+Venturing into the bright red sunlight, I see a tired young mother tending to her baby and sorting what looks like a large pile of sand.
+
+CETTALON: Oh, hello neighbor. I'm Cettalon.
+TAHM: Hi, I'm Tahm. I just arrived here today.
+CETTALON: Nice to meet you. Junior and I have been here for about a month in Earth hours. 
+CETTALON: It's hard to be exact since it's always daylight here.
+-> TAHM: What are you doing with this sand here?
+    CETTALON: I'm sorting out the different materials for recycling. It's one of the few jobs available for humans here.
+    CETTALON: It's tedious, but it's safer than working in a factory or scavenging trash heaps.
+    CETTALON: Plus, I get to work from home.
+    -> TAHM: Working in a factory?
+        <<set $factory_open to true>>
+        CETTALON: On the outskirts of the Refugee Sector are experimental factories.
+        CETTALON: Anyone can show up and start working immediately.
+        CETTALON: It's a little competitive though. There's a lot of people in line to work there.
+    -> TAHM: Scavenging trash heaps?
+        <<set $trash_open to true>>
+        CETTALON: I don't know if you've noticed, but humans produce a lot of waste.
+        CETTALON: It builds up faster than it can get recycled.
+        CETTALON: But you can find valuable materials, even food pellets, in the trash heaps.
+-> TAHM: What did you use to do on Earth?
+    CETTALON: I was a geologist. Which is why I find the sand here fascinating. The principles of tectonic movements don't apply at all on this planet. What about you?
+    TAHM: I was a surgeon. My hospital was destroyed in an airstrike.
+    CETTALON: Hmmm. It seems like the A.N.G.E.L.S. still only accept highly educated people from Earth. Yet there are no jobs suitable for our qualifications here... So what's the point? Why not just let anyone from Earth come?
+    -> TAHM: Maybe they see humans rebuilding our society on their planet.
+        <<set $humanitarian += 1>>
+        <<set $courage += 1>>
+        CETTALON: Look around. Don't you think the Refugee Sector could use a few people who worked in Waste Management? What's the point of having a bunch of university professors when we don't even have a working plumbing system?
+        TAHM: I'm sure they will start expanding the program once there are more opportunities for humans here.
+        CETTALON: I hope so. My partner was a landscaper. They're still stuck on Earth.
+    -> TAHM: Maybe it's all just for show. The prestige of having prestigious humans living and working on their planet.
+        <<set $discouraged += 1>>
+        CETTALON: Hah. You make us sound like trophies. Too bad it seems like the majority of them don't find us valuable at all.
+        CETTALON: "🏱︎♋︎❒︎♋︎⬧︎♓︎⧫︎♏︎" is what they call us. It means "parasite". 
+        <<set $translate_parasite to "parasite">>
+        TAHM: I haven't heard that yet.
+        CETTALON: You just got here. You will soon enough.
+    -> TAHM: There's limited space here. How else would they decide who to accept?
+        <<set $utilitarian += 1>>
+        CETTALON: They could use a lottery system? I don't know... I hope I never have to decide on the value of a human life.
+        TAHM: It sounds terrible, but that's common in the medical system. 
+        TAHM: How do you decide who gets a donor organ? 
+        TAHM: Do you assign the top ER surgeon to an orphaned boy or to the Mayor who funds your hospital?
+        CETTALON: I get it. My partner was a landscaper. They're still stuck on Earth.
+-> TAHM: A month? I thought Earth refugees only got 8 reds and 7 purples.
+    CETTALON: ... They used to be a lot more generous.
+    CETTALON: When I got here, they gave us 33 reds and 33 purples.
+    CETTALON: Some of them weren't prepared to deal with all the organic waste humans produce.
+    CETTALON: Their society just never had to deal with it before.
+    CETTALON: So they passed more and more limitations on human refugees.
+    -> TAHM: That seems unfair.
+        <<set $discouraged += 1>>
+        CETTALON: I agree. But we work with what we've got.
+    -> TAHM: It doesn't matter how long I have. I'm going to make it.
+        <<set $courage += 1>>
+        CETTALON: That's a good attitude to have.
+        CETTALON: But for as long as I've been here, I'm not even close to paying the fees.
+        CETATLON: I have to pay two. One for me and one for Junior.
+CETTALON: Anyways, it was nice chatting with you. I'm going to get back to work.
+<<if $factory_open is false && $trash_open is false>>
+CETTALON: If you're looking for a job, try the factories on the ouskirts of the Refugee Sector.
+<<set $factory_open to true>>
+<<endif>>
+She returns to her labor.
+<<set $color to "purple">>
+
+<<elseif $color is "purple">>
+As promised, Paul is back with a care package for me.
+PAUL: How was first job, Tahm?
+-> TAHM: Terrible. Tedious.
+    <<set $discouraged += 1>>
+    PAUL: Self apologizes.
+-> TAHM: Nothing I didn't expect.
+    <<set $courage += 1>>
+    PAUL: Self recognizes difficulty.
+PAUL: More factories opening with each color.
+<<set $factory_open to true>>
+PAUL: In meantime, a snack.
+PAUL: And a bit of extra help.
+<<set $money += 5>>
+TAHM: Is this your money, Paul?
+PAUL: Yes. Found in recycling heaps. Please accept.
+<<set $trash_open to true>>
+-> TAHM: I can't accept this.
+    PAUL: Yes, you can. Self has no need. Divine Construct provides all.
+    TAHM: Thank you, Paul.
+-> TAHM: Thank you, Paul.
+PAUL: Enjoy rest, Tahm. Will return next purple.
+Paul rolls away.
+I enter my tent and collapse on my bedroll for a quick nap.
+There's still some time left in this purple when I wake up.
+<<set $factory_full to true>>
+<<set $day += 1>>
+<<set $color to "red">>
+<<endif>>
+[[work]]
+===
+
+title: day2
+---
+CYCLE {$day}, SHADE {$color}
+<<if $color is "red">>
+When I get back to my tent, an A.N.G.E.L. is waiting for me.
+It's not Paul.
+
+THE CAPTAIN: Well, hello again Tahm. I hope you had a pleasant trip.
+TAHM: You were the pilot of the ship that transported us here.
+THE CAPTAIN: Yes. And I'm here to collect.
+TAHM: Collect what? I already paid for my ticket.
+THE CAPTAIN: 🙰♋︎☺︎♋︎🙰♋︎. Ha. Ha. Ha. How much do you think Earth money is worth now?
+THE CAPTAIN: There may not be an Earth after the current war. The exchange rate is awful.
+THE CAPTAIN: Every trip to Earth and back has costs. Fuel. Organic sustenance. Time.
+THE CAPTAIN: You still owe me.
+-> TAHM: This is extortion.
+    THE CAPTAIN: This is the free market.
+-> TAHM: I thought the Construct can manufacture everything.
+    THE CAPTAIN: Not intergalactic currencies.
+    THE CAPTAIN: You should know that abundance reduces value.
+THE CAPTAIN: From now on, each red you will pay me and my crew ₴{$pirate_goal}.
+THE CAPTAIN: Until you have paid for the full cost of your ticket.
+THE CAPTAIN: Do not speak to your social worker about this.
+THE CAPTAIN: There will be consequences if you refuse to pay.
+THE CAPTAIN: I will see you next red.
+<<set $factory_full to false>>
+<<set $factory_open to true>>
+<<set $trash_open to true>>
+<<set $color to "purple">>
+
+<<elseif $color is "purple">>
+I return from my tasks to find Paul waiting for me with more supplies.
+PAUL: Hello Tahm. 
+PAUL: All is well?
+-> TAHM: Yes, I'm on track for citizenship.
+    PAUL: Happy to hear that.
+-> TAHM: No, it's too hard to make money.
+    PAUL: Unfortunate. But self sees Tahm work hard.
+    PAUL: Hard work is always rewarded.
+PAUL: Self found no recyclables today. Only meal pellets this color.
+TAHM: It's okay Paul. I know you don't even have to help me at all.
+TAHM: I appreciate that you care enough to try.
+PAUL: Altruism is our way. Divine Construct provides all.
+TAHM: I don't think all the A.N.G.E.L.S. feel the same way.
+PAUL: ...
+PAUL: They simply do not realize the value of human work.
+PAUL: All life powers Divine Construct.
+<<set $color to "red">>
+<<set $day += 1>>
+<<endif>>
+[[work]]
+===
+
+title: day3
+---
+CYCLE {$day}, SHADE {$color}
+<<if $color is "red">>
+The Captain is back to torment me.
+THE CAPTAIN: Tahm. Your payment.
+<<if $money > $pirate_goal>>
+-> TAHM: Here it is.
+    <<set $money -= $pirate_goal>>
+    THE CAPTAIN: You are off to a great start.
+    THE CAPTAIN: Keep it up.
+<<else>>
+-> TAHM: I don't have enough.
+    THE CAPTAIN: Then you will pay what you have.
+    <<set $money to 0>>
+    THE CAPTAIN: And this is for the missing amount.
+    The massive A.N.G.E.L. suddenly charges me, knocking me to the ground.
+    They deliberately roll their full weight over my foot, snapping the bones within.
+    TAHM: FUCK!!
+    THE CAPTAIN: Next time you will not get off so easily.
+<<endif>>
+TAHM: Why are you doing this?
+THE CAPTAIN: As a human, you should already know why.
+<<set $color to "purple">>
+
+<<elseif $color is "purple">>
+TEXT GOES HERE
+<<set $color to "red">>
+<<set $day += 1>>
+<<endif>>
+[[work]]
+===
+
+title: day4
+---
+CYCLE {$day}, SHADE {$color}
+<<if $color is "red">>
+TEXT GOES HERE
+<<set $color to "purple">>
+
+<<elseif $color is "purple">>
+TEXT GOES HERE
+<<set $color to "red">>
+<<set $day += 1>>
+<<endif>>
+[[work]]
+===
+
+title: day5
+---
+CYCLE {$day}, SHADE {$color}
+<<if $color is "red">>
+TEXT GOES HERE
+<<set $color to "purple">>
+
+<<elseif $color is "purple">>
+TEXT GOES HERE
+<<set $color to "red">>
+<<set $day += 1>>
+<<endif>>
+[[work]]
+===
+
+title: day6
+---
+CYCLE {$day}, SHADE {$color}
+<<if $color is "red">>
+TEXT GOES HERE
+<<set $color to "purple">>
+
+<<elseif $color is "purple">>
+TEXT GOES HERE
+<<set $color to "red">>
+<<set $day += 1>>
+<<endif>>
+[[work]]
+===
+
+title: day7
+---
+CYCLE {$day}, SHADE {$color}
+<<if $color is "red">>
+TEXT GOES HERE
+<<set $color to "purple">>
+
+<<elseif $color is "purple">>
+TEXT GOES HERE
+<<set $color to "red">>
+<<set $day += 1>>
+<<endif>>
+[[work]]
+===
+
+title: day8
+---
+CYCLE {$day}, SHADE {$color}
+<<if $color is "red">>
+TEXT GOES HERE
+<<set $color to "purple">>
+
+<<elseif $color is "purple">>
+TEXT GOES HERE
+<<set $color to "red">>
+<<set $day += 1>>
+<<endif>>
+[[work]]
+===
+
+title: daytemplate
+---
+CYCLE {$day}, SHADE {$color}
+<<if $color is "red">>
+TEXT GOES HERE
+<<set $color to "purple">>
+
+<<elseif $color is "purple">>
+TEXT GOES HERE
+<<set $color to "red">>
+<<set $day += 1>>
+<<endif>>
+[[work]]
+===
+
+title: pirate_intro
+---
+
+===
+
+title: pirate_1
+---
+
+===
+
+title: pirate_2
+---
+-> TAHM: I noticed your English is better than most of the other A.N.G.E.L.S.
+    THE CAPTAIN: How kind of you to notice, Tahm.
+    THE CAPTAIN: It's because I lived on Earth for many centuries. 
+    THE CAPTAIN: I have always been fascinated by humans.
+
+-> TAHM: I don't understand. Why do you think so differently from your peers?
+    THE CAPTAIN: You see, I've lived on Earth for centuries. 
+    THE CAPTAIN: The struggles of your kind always fascinated me.
+    THE CAPTAIN: Earth was like an organic Divine Construct.
+    THE CAPTAIN: So many resources on your planet.
+    THE CAPTAIN: But hoarded by only a few. Why?
+-> TAHM: There wasn't enough for everyone.
+    <<set $utilitarian += 1>>
+    THE CAPTAIN: Of course there was enough. Enough to fulfill the needs of all your citizens.
+    THE CAPTAIN: The simple truth is that "enough" was never enough.
+    THE CAPTAIN: I admired that about humans.
+-> TAHM: Greed. It was the fatal flaw in our society.
+    <<set $humanitarian += 1>>
+    THE CAPTAIN: I disagree. Greed is good.
+    THE CAPTAIN: The struggle to constantly make more, have more, do more, elevated your species.
+    THE CAPTAIN: The ones who were successful could simply enjoy the bounties of the galaxy.
+    THE CAPTAIN: While the others ran the Earth Construct on their behalf.
+THE CAPTAIN: Our Divine Construct provides everything.
+THE CAPTAIN: But this abundance reduces the value of our goods in the intergalactic trade.
+THE CAPTAIN: I am not satisfied with simply existing.
+THE CAPTAIN: To be a simple cog in the machine.
+===

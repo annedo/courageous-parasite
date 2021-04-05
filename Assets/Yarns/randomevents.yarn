@@ -1,0 +1,45 @@
+title: random_buyitem
+---
+As I return to the refugee sector, I come across a scruffy looking human child.
+CHILD: Hey, Mister. I have a spare medigel pack for sale. ₴5.
+<<if $money >=5>>
+-> TAHM: I could use that. (BUY MEDIGEL PACK)
+    <<set $has_medigel to true>>
+-> TAHM: No thanks.
+    CHILD: Please, sir, I really need the money.
+    -> TAHM: Alright, fine. (BUY MEDIGEL PACK)
+        <<set $has_medigel to true>>
+    -> TAHM: If you're working in the factory, you might really need the medigel.
+        The child turns away sadly, looking for another potential buyer.
+<<else>>
+-> TAHM: I can't afford that right now.
+    CHILD: I really need the money, sir.
+    CHILD: Will you buy it if I meet you again next shade?
+    -> TAHM: Sure, if I have the money then.
+        CHILD: AWESOME!! I'll see you next color!
+    -> TAHM: Don't bother. I'm having a hard time finding money too, kid.
+        CHILD: I get it.
+        The child turns away sadly, looking for another potential buyer.
+<<endif>>
+===
+
+title: random_angelasshole
+---
+An A.N.G.E.L. stares at me as I walk back to my tent.
+A.N.G.E.L.: 👎︎♓︎⬧︎♑︎◆︎⬧︎⧫︎♓︎■︎♑︎📬︎📬︎📬︎ ⬥︎♋︎⬧︎⧫︎♏︎♐︎◆︎●︎ {$translate_parasite}...
+-> TAHM: What did you just say to me?
+    <<set $courage +=1>>
+    A.N.G.E.L.: Not learn language? Why come? Lazy... parasite.
+<<if $translate_parasite is "parasite">>
+-> TAHM: I just got back from work. You don't know what you're talking about.
+    <<set $courage +=1>>
+    A.N.G.E.L.: Fake work. Parasite never joins Divine Construct.
+<<endif>>
+-> Just let it go.
+    <<set $discouraged +=1>>
+===
+
+title: random_humanasshole
+---
+On my way back to my tent, some guy trips me.
+===

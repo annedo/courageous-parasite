@@ -1,0 +1,160 @@
+﻿title: intro
+---
+<<set $citizen_goal to 50>>
+<<set $pirate_goal to 10>>
+<<set $humanitarian to 0>>
+<<set $utilitarian to 0>>
+<<set $courage to 0>>
+<<set $discouraged to 0>>
+
+INTERCOM: ❄︎✌︎😐︎☜︎⚐︎☞︎☞︎ ✋︎💣︎💣︎✋︎☠︎☜︎☠︎❄︎
+
+As the spaceship took off, my last sight of Earth was of mushroom clouds blooming across the horizon.
+
+My name is Tahm. I used to be a surgeon.
+Then the 23rd Global Nuclear War happened.
+
+INTERCOM: ☜︎☠︎❄︎☜︎☼︎✋︎☠︎☝︎ 💧︎🏱︎✌︎👍︎☜︎
+
+As we soar into the vast expanse of the stars, the roar of the engines simmers to a low hum.
+They are now so quiet I can hear the sobbing of the families around me.
+
+INTERCOM: 💧︎❄︎✌︎👌︎✋︎☹︎✋︎☪︎✋︎☠︎☝︎ ☞︎☹︎✋︎☝︎☟︎❄︎
+
+Now I'm headed for a new planet, to start a new life from scratch.
+-> Talk to the passengers sitting next to me.
+    I look at my fellow refugees. An assortment of groups. Some families. Some are like me, alone.
+    But the mood is too somber. The ones who aren't crying are sleeping.
+    And the ones doing neither have glassy, unfocused stares, as if remembering something a thousand yards away.
+    I can't think of anything to say.
+    <<set $humanitarian += 1>>
+-> Sit in silence and try to forget about what I'm leaving behind.
+    I close my eyes, and will myself to forget. 
+    The friends and family who couldn't go with me.
+    The hospital before it blew up.
+    The feeling of grass between my toes and the smell of rain.
+    The only thing that matters is now.
+    <<set $utilitarian += 1>>
+
+We fly in silence for a while, as the ship stabilizes and the finality of our decisions sinks in.
+<<wait 2>>
+
+Eventually the door to another cabin slides open.
+The A.N.G.E.L.S clang against the metal floors as they roll over to us.
+
+🕆︎❒︎⬧︎♋︎: Hello, Tahm.
+🕆︎❒︎⬧︎♋︎: Self is 🕆︎❒︎⬧︎♋︎. For humans, self is "Paul".
+TAHM: Hi, Paul.
+PAUL: Paul is Tahm's designated social worker.
+PAUL: Sorry for Earth.
+TAHM: Yeah.
+
+INTERCOM: ❄︎✋︎💣︎☜︎ ❄︎⚐︎ ✌︎☼︎☼︎✋︎✞︎✌︎☹︎🖳︎ 🗐︎ 💧︎☟︎✌︎👎︎☜︎💧︎
+
+PAUL: Says we reach planet in 4 purples. To Tahm, is 64 Earth hours.
+TAHM: That's quite a long time. 
+PAUL: You have much to learn.
+PAUL: New planet. New language. New culture. New time cycles.
+PAUL: Do you fear, Tahm?
+-> TAHM: Yes.... it all seems so daunting.
+    PAUL: Expected. Will be ok. Self will help Tahm.
+    <<set $discouraged += 1>>
+-> TAHM: No.... all I can do is my best to survive.
+    PAUL: Brave. Good quality. Must try hard.
+    <<set $courage += 1>>
+-> TAHM: I don't know.... too much has happened to think clearly.
+    PAUL: Expected. Tahm lose home planet. Self will help Tahm.
+[[exposition]]
+===
+
+title: exposition
+---
+PAUL: First, about planet. Constant sun. 
+PAUL: Time is by color of light. 
+PAUL: Red to purple. Purple to red. Forever bright.
+PAUL: Humans receive free shelter for 8 reds and 7 purples.
+PAUL: After that, must pay citizenship fee. ₴{$citizen_goal}.
+-> TAHM: Sounds reasonable enough. I was a doctor back on Earth.
+Paul rolls back and forth nervously. At least, I think it's nervousness.
+PAUL: Ah... no organics on planet.
+TAHM: At all?
+PAUL: First organics on planet are humans. Before, all metal.
+PAUL: Planet is ancient construct. Divine. Can manufacture anything.
+PAUL: Can make necessary human nutrients. Medicinal gel. Water.
+PAUL: Purpose of all beings is to run construct.
+-> TAHM: But I wanted to help people. 
+    <<set $humanitarian += 1>>
+    PAUL: Help run the construct. Helps everyone.
+    TAHM: Aren't you a social worker?
+    PAUL: Yes. But self joins construct when not with humans.
+-> TAHM: Beats dying in a nuclear wasteland at least.
+    <<set $utilitarian += 1>>
+    PAUL: No fear. Construct complex. But running is basic.
+TAHM: So what kind of work will I be doing?
+PAUL: Sometimes, gears fail. We replace with own bodies. Until replacement manufactured.
+PAUL: Not possible for human. Too soft. Too fragile. Must find other work.
+PAUL: We build new constructs. Experimental. Humans turn small gears. Or process recycling.
+PAUL: Self knows humans have great potential. We will learn from each other.
+PAUL: Perhaps create something new.
+PAUL: Perhaps, one day, enough organics for doctors too.
+PAUL: Now, let us practice the language of 🕈︎□︎❒︎♎︎⬧︎.
+
+<<TODO fade out>>
+[[slums_arrival]]
+===
+
+title: slums_arrival
+---
+Eventually, the ship makes it to our destination, and I take my first tentative step upon this strange new landscape.
+
+PAUL: Welcome to Divine Construct, Tahm.
+
+Gears of endless shapes and sizes turn slowly under my feet, under a smooth, glassy surface. 
+Like a giant skeleton watch.
+The buildings and structures I can see are made of the same gears, some insulated by glass, and some freely turning in the open air.
+The sky is bathed in a red glow.
+Everything is constantly moving.
+
+PAUL: Your thoughts?
+-> TAHM: It's beautiful.
+    <<set $courage += 1>>
+    PAUL: Self agrees. Hope Tahm can stay.
+-> TAHM: It's disorienting.
+    PAUL: Self bring Tahm nausea medicinals?
+    TAHM: That would be great, thanks. My house won't look like this will it?
+    PAUL: No. Newly importing materials from other planets. 
+    PAUL: Strange textures for us too.
+-> TAHM: It's terrifying.
+    <<set $courage -= 1>>
+    PAUL: Self understands. Felt same on Earth. No fear, Tahm, your shelter will be still.
+    <<set $paul_shelter to true>>
+
+Paul leads me to my assigned shelter in the Refugee Sector.
+<<scenechange TentCity>>
+
+...It's a tent. 
+I guess I should have expected something like that. 
+An alien refugee camp is still a refugee camp, after all.
+
+The entire Refugee Sector is a tent city. 
+It is a mass of chaos and organic waste on this planet of clean, systematic metal.
+
+PAUL: Please, rest now. Self will return next purple. Bring more supplies for Tahm.
+TAHM: Thank you again, Paul. I really appreciate everything you've done.
+
+Paul emits a high pitched, melodic whistle and rolls off into the distance.
+
+I lay on the floor of my tent, using my luggage as a makeshift pillow. 
+<<if $paul_shelter is true>>
+Paul was right.
+<<endif>>
+Inside, things are still. 
+Though my mind can still see phantom swirls in the texture of the canvas fabric, they fade away after a few minutes.
+Most importantly - it's dark. 
+The reality of having constant sunlight is sinking in.
+I have never been more thankful for the darkness as I slip away into sleep.
+<<set $day to 1>>
+<<set $color to "red">>
+<<fade out>>
+[[hub_node]]
+===

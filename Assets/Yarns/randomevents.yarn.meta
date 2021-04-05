@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 2a81d685d65faeb418111aa37649825e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - randomevents-random_buyitem-0
+  - randomevents-random_buyitem-1
+  - randomevents-random_buyitem-2
+  - randomevents-random_buyitem-3
+  - randomevents-random_buyitem-4
+  - randomevents-random_buyitem-5
+  - randomevents-random_buyitem-6
+  - randomevents-random_buyitem-7
+  - randomevents-random_buyitem-8
+  - randomevents-random_buyitem-9
+  - randomevents-random_buyitem-10
+  - randomevents-random_buyitem-11
+  - randomevents-random_buyitem-12
+  - randomevents-random_buyitem-13
+  - randomevents-random_buyitem-14
+  - randomevents-random_buyitem-15
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: "Error on line 6 at position 33:\nmismatched input 'MEDIGEL'
+    expecting FORMAT_FUNCTION_EXPRESSION_START\r\n-> TAHM: I could use that. [BUY
+    MEDIGEL PACK]\r\r\n                                ^^^^^^^"
+  baseLanguage: {fileID: 7128917941130120860, guid: 2a81d685d65faeb418111aa37649825e, type: 3}
+  localizations: []
