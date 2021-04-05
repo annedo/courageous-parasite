@@ -37,9 +37,4 @@ public class Speaker : MonoBehaviour
 
         FrameCount++;
     }
-
-    public void HideSprite()
-    {
-        _spriteDisplayer.HideSprite();
-    }
 }

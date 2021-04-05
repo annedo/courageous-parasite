@@ -10,13 +10,16 @@ public class RunYarn : MonoBehaviour
     public Speaker PlayerCharacter;
     public Speaker NonPlayerCharacter;
 
+    void Awake()
+    {
+        LoadCharacter(CharacterName.TAHM);
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (_currentLine != null && _currentLine.Length > 0 && _currentLine.Length < 13)
         {
-            LoadCharacter(CharacterName.TAHM);
-
             if (_currentLine.Contains(CharacterName.TAHM.ToString()))
                 PlayerCharacter.Speaking = true;
             else if (_currentLine.Contains(CharacterName.CETTALON.ToString()))
@@ -56,16 +59,6 @@ public class RunYarn : MonoBehaviour
     {
         PlayerCharacter.Speaking = false;
         NonPlayerCharacter.Speaking = false;
-    }
-
-    /// <summary>
-    /// Empty the speaker sprites.
-    /// Called by <see cref="DialogueUI"/> in Scene.
-    /// </summary>
-    public void OnDialogueEnd()
-    {
-        PlayerCharacter.HideSprite();
-        NonPlayerCharacter.HideSprite();
     }
 
     private void LoadCharacter(CharacterName character)

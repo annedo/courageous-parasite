@@ -57,7 +57,7 @@ namespace Assets.Scripts
         /// <summary>
         /// The amount of frames between each sprite change for a speaker
         /// </summary>
-        public const int SPEAKER_FRAMERATE = 50;
+        public const int SPEAKER_FRAMERATE = 15;
 
         /// <summary>
         /// Cog game
